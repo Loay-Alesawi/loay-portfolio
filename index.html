@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loay Alesawi | IT & Network Engineer</title>
+    <meta name="description" content="Portfolio of Loay Alesawi, IT & Network Engineer | CCNA & HCIA-Security | Infrastructure & Systems Administration | Data Analyst">
+    <meta property="og:title" content="Loay Alesawi | IT & Network Engineer">
+    <meta property="og:description" content="Portfolio of Loay Alesawi, IT & Network Engineer | CCNA & HCIA-Security | Infrastructure & Systems Administration | Data Analyst">
+    <meta property="og:image" content="https://luayalaysuy-sketch.github.io/loay-portfolio/assets/og-image.png">
+    <meta property="og:url" content="https://luayalaysuy-sketch.github.io/loay-portfolio/">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b0f19">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Loader -->
+<div class="loader-wrapper" id="loader">
+  <div class="loader"><span class="logo-b">&lt;</span>LA<span class="logo-b">/&gt;</span></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<canvas id="particleCanvas"></canvas>
+
+<!-- Nav -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo"><span class="logo-b">&lt;</span>LA<span class="logo-b">/&gt;</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link" data-en="About" data-ar="عني">About</a></li>
+      <li><a href="#experience" class="nav-link" data-en="Experience" data-ar="الخبرات">Experience</a></li>
+      <li><a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+      <li><a href="#certifications" class="nav-link" data-en="Certifications" data-ar="الشهادات">Certifications</a></li>
+      <li><a href="#education" class="nav-link" data-en="Education" data-ar="التعليم">Education</a></li>
+      <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      <button class="lang-toggle" id="langToggle">AR</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-content">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="hero-badge anim"><i class="fas fa-shield-halved"></i><span data-en="Available for opportunities" data-ar="متاح للفرص الوظيفية">Available for opportunities</span></div>
+        <h1 class="anim">
+          <span class="hero-greeting" data-en="Hello, I'm" data-ar="مرحباً، أنا">Hello, I'm</span>
+          <span class="hero-name-big" data-en="Loay Alesawi" data-ar="لؤي العيسوي">Loay Alesawi</span>
+        </h1>
+        <div class="hero-type anim"><span class="tp-pre" data-en="I'm " data-ar="أنا ">I'm </span><span id="typewriter"></span><span class="tp-cur">|</span></div>
+        <p class="hero-desc anim" data-en="IT & Network Engineer experienced in system operations, networking, cybersecurity, and business & data analysis. Focused on improving IT infrastructure and delivering clear, data-backed insights." data-ar="مهندس تقنية معلومات وشبكات ذو خبرة في عمليات الأنظمة والشبكات والأمن السيبراني وتحليل الأعمال والبيانات. أركّز على تحسين البنية التحتية وتقديم رؤى واضحة مبنية على البيانات.">IT & Network Engineer experienced in system operations, networking, cybersecurity, and business & data analysis. Focused on improving IT infrastructure and delivering clear, data-backed insights.</p>
+        <div class="hero-cta anim">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> <span data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</span></a>
+          <a href="assets/Loay-Alaysuy-CV.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> <span data-en="Download CV" data-ar="تحميل السيرة">Download CV</span></a>
+        </div>
+        <div class="hero-stats anim">
+          <div class="stat"><span class="stat-n" data-count="17">0</span>+<br><small data-en="Certifications" data-ar="شهادات">Certifications</small></div>
+          <div class="stat"><span class="stat-n" data-count="5">0</span>+<br><small data-en="Experiences" data-ar="خبرات">Experiences</small></div>
+          <div class="stat"><span class="stat-n" data-count="345">0</span>+<br><small data-en="Volunteer Hrs" data-ar="ساعة تطوع">Volunteer Hrs</small></div>
+        </div>
+      </div>
+      <div class="hero-photo anim">
+        <div class="photo-wrapper">
+          <img src="assets/profile.png" alt="Loay Alesawi" />
+          <div class="photo-ring"></div>
+          <div class="photo-ring r2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="mouse"><div class="wheel"></div></div><span data-en="Scroll" data-ar="مرر">Scroll</span></div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-user"></i> <span data-en="About Me" data-ar="عني">About Me</span></span><h2 class="sec-title" data-en="About <span class='text-grad'>Me</span>" data-ar="عني <span class='text-grad'>أنا</span>">About <span class="text-grad">Me</span></h2></div>
+    <div class="about-grid">
+      <div class="about-text anim">
+        <p data-en="IT & Network Engineer experienced in system operations, networking, and cybersecurity. Skilled in troubleshooting hardware, software, and network issues, managing user access, and supporting Windows and Linux environments." data-ar="مهندس تقنية معلومات وشبكات ذو خبرة في عمليات الأنظمة والشبكات والأمن السيبراني. ماهر في حل مشاكل الأجهزة والبرمجيات والشبكات وإدارة صلاحيات المستخدمين ودعم بيئات ويندوز ولينكس.">IT & Network Engineer experienced in system operations, networking, and cybersecurity. Skilled in troubleshooting hardware, software, and network issues, managing user access, and supporting Windows and Linux environments.</p>
+        <p data-en="Experienced in DHCP, VLANs, firewall monitoring, and network analysis tools such as Wireshark. Also skilled in business and data analysis, including market research, forecasting models, and practical insights to support decision-making." data-ar="ذو خبرة في DHCP وVLAN ومراقبة الجدار الناري وأدوات تحليل الشبكات مثل Wireshark. كذلك ماهر في تحليل الأعمال والبيانات، بما في ذلك أبحاث السوق والنماذج التنبؤية والرؤى العملية لدعم اتخاذ القرار.">Experienced in DHCP, VLANs, firewall monitoring, and network analysis tools such as Wireshark. Also skilled in business and data analysis, including market research, forecasting models, and practical insights to support decision-making.</p>
+        <div class="info-grid">
+          <div class="info-i"><i class="fas fa-map-marker-alt"></i><div><small data-en="Location" data-ar="الموقع">Location</small><span data-en="Jeddah, Saudi Arabia" data-ar="جدة، السعودية">Jeddah, Saudi Arabia</span></div></div>
+          <div class="info-i"><i class="fas fa-graduation-cap"></i><div><small data-en="Degree" data-ar="الدرجة">Degree</small><span data-en="B.IT (Information Technology)" data-ar="بكالوريوس تقنية المعلومات">B.IT (Information Technology)</span></div></div>
+          <div class="info-i"><i class="fas fa-envelope"></i><div><small data-en="Email" data-ar="البريد">Email</small><span>luayalaysuy@gmail.com</span></div></div>
+
+        </div>
+      </div>
+      <div class="about-cards anim">
+        <div class="gcard hl"><div class="gi"><i class="fas fa-network-wired"></i></div><h3 data-en="Networking" data-ar="الشبكات">Networking</h3><p data-en="Routing & Switching, TCP/IP, VLANs" data-ar="توجيه وتبديل، TCP/IP، VLANs">Routing & Switching, TCP/IP, VLANs</p></div>
+        <div class="gcard hl"><div class="gi"><i class="fas fa-shield-halved"></i></div><h3 data-en="Cybersecurity" data-ar="الأمن السيبراني">Cybersecurity</h3><p data-en="Firewall, incident response, threat analysis" data-ar="جدار ناري، استجابة للحوادث، تحليل تهديدات">Firewall, incident response, threat analysis</p></div>
+        <div class="gcard hl"><div class="gi"><i class="fas fa-server"></i></div><h3 data-en="Systems & Odoo" data-ar="الأنظمة و Odoo">Systems & Odoo</h3><p data-en="Windows/Linux, Odoo ERP, Cloud" data-ar="ويندوز/لينكس، Odoo ERP، سحابي">Windows/Linux, Odoo ERP, Cloud</p></div>
+        <div class="gcard hl"><div class="gi"><i class="fas fa-code"></i></div><h3 data-en="Development" data-ar="التطوير">Development</h3><p data-en="Web apps, REST APIs, PostgreSQL" data-ar="تطبيقات ويب، REST APIs، PostgreSQL">Web apps, REST APIs, PostgreSQL</p></div>
+        <div class="gcard hl"><div class="gi"><i class="fas fa-chart-bar"></i></div><h3 data-en="Data Analysis" data-ar="تحليل البيانات">Data Analysis</h3><p data-en="Python, forecasting, data visualization" data-ar="Python، التنبؤ، عرض البيانات">Python, forecasting, data visualization</p></div>
+        <div class="gcard hl"><div class="gi"><i class="fas fa-chart-line"></i></div><h3 data-en="Business Analysis" data-ar="تحليل الأعمال">Business Analysis</h3><p data-en="Feasibility studies, strategy, budgeting" data-ar="دراسات جدوى، استراتيجية، ميزانيات">Feasibility studies, strategy, budgeting</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-briefcase"></i> <span data-en="Experience" data-ar="الخبرات">Experience</span></span><h2 class="sec-title" data-en="Work <span class='text-grad'>Experience</span>" data-ar="الخبرات <span class='text-grad'>العملية</span>">Work <span class="text-grad">Experience</span></h2></div>
+    <div class="timeline">
+      <div class="tl-item anim" data-side="left">
+        <div class="tl-dot"><i class="fas fa-chart-line"></i></div>
+        <div class="gcard hl tl-card">
+          <div class="tl-date"><i class="fas fa-calendar"></i> 2026</div>
+          <h3 data-en="Business Analyst" data-ar="محلل أعمال">Business Analyst</h3>
+          <span class="tl-co" data-en="BCG" data-ar="BCG"><img src="assets/logo-bcg.png" alt="BCG" class="tl-logo">BCG</span>
+          <span class="tl-type" data-en="Virtual Experience" data-ar="تجربة افتراضية">Virtual Experience</span>
+          <ul class="tl-det">
+            <li data-en="Market research & technical feasibility studies" data-ar="أبحاث السوق ودراسات الجدوى التقنية">Market research & technical feasibility studies</li>
+            <li data-en="Developed budgets & financial models in Excel" data-ar="إعداد الميزانيات والنماذج المالية في Excel">Developed budgets & financial models in Excel</li>
+            <li data-en="Analyzed operational processes & technology stacks" data-ar="تحليل العمليات التشغيلية والبنية التقنية">Analyzed operational processes & technology stacks</li>
+            <li data-en="Created executive summaries with clear recommendations" data-ar="إعداد ملخصات تنفيذية مع توصيات عملية">Created executive summaries with clear recommendations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item anim" data-side="right">
+        <div class="tl-dot"><i class="fas fa-database"></i></div>
+        <div class="gcard hl tl-card">
+          <div class="tl-date"><i class="fas fa-calendar"></i> 2026</div>
+          <span class="tl-co" data-en="STC & Misk Foundation" data-ar="stc ومؤسسة مسك"><img src="assets/logo-stc.png" alt="STC" class="tl-logo">STC & Misk Foundation</span>
+          <span class="tl-type" data-en="Professional Training" data-ar="تدريب مهني">Professional Training</span>
+          
+          <div class="tl-role-group">
+            <div class="tl-role-item">
+              <h4 class="tl-role-title">
+                <span data-en="Data Analyst" data-ar="محلل بيانات">Data Analyst</span>
+                <span class="role-time" data-en="May 2026" data-ar="مايو ٢٠٢٦">May 2026</span>
+              </h4>
+              <ul class="tl-det">
+                <li data-en="Analyzed user behavior data to identify patterns & trends" data-ar="تحليل بيانات سلوك المستخدم لاكتشاف الأنماط والاتجاهات">Analyzed user behavior data to identify patterns & trends</li>
+                <li data-en="Built forecasting models to predict usage & identify peak periods" data-ar="بناء نماذج تنبؤية للاستخدام وتحديد فترات الذروة">Built forecasting models to predict usage & identify peak periods</li>
+                <li data-en="Utilized Python & Pandas to clean and process large datasets" data-ar="استخدام Python وPandas لتنظيف ومعالجة مجموعات البيانات الكبيرة">Utilized Python & Pandas to clean and process large datasets</li>
+              </ul>
+            </div>
+
+            <div class="tl-role-item">
+              <h4 class="tl-role-title">
+                <span data-en="Cybersecurity Analyst" data-ar="محلل أمن سيبراني">Cybersecurity Analyst</span>
+                <span class="role-time" data-en="Apr 2026" data-ar="أبريل ٢٠٢٦">Apr 2026</span>
+              </h4>
+              <ul class="tl-det">
+                <li data-en="Completed a virtual incident response experience in threat analysis" data-ar="إتمام تجربة افتراضية للاستجابة للحوادث وتحليل التهديدات">Completed a virtual incident response experience in threat analysis</li>
+                <li data-en="Focused on identifying threats, analyzing logs, and security workflows" data-ar="التركيز على تحديد التهديدات، تحليل السجلات، وسير العمل الأمني">Focused on identifying threats, analyzing logs, and security workflows</li>
+                <li data-en="Identified Indicators of Compromise (IOCs) and security procedures" data-ar="تحديد مؤشرات الاختراق (IOCs) والإجراءات الأمنية">Identified Indicators of Compromise (IOCs) and security procedures</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item anim" data-side="right">
+        <div class="tl-dot"><i class="fas fa-handshake-angle"></i></div>
+        <div class="gcard hl tl-card">
+          <div class="tl-date"><i class="fas fa-calendar"></i> 2025</div>
+          <span class="tl-co" data-en="Namaa Al-Ahliya Charity" data-ar="جمعية نماء الأهلية"><img src="assets/logo-namaa.png" alt="Namaa" class="tl-logo">Namaa Al-Ahliya Charity</span>
+          
+          <div class="tl-role-group">
+            <div class="tl-role-item">
+              <h4 class="tl-role-title">
+                <span data-en="Cybersecurity Specialist" data-ar="أخصائي أمن سيبراني">Cybersecurity Specialist</span>
+                <span class="role-time" data-en="Jul 2025 - Dec 2025" data-ar="يوليو ٢٠٢٥ - ديسمبر ٢٠٢٥">Jul 2025 - Dec 2025</span>
+              </h4>
+              <ul class="tl-det">
+                <li data-en="Configured and activated firewall and cybersecurity systems" data-ar="إعداد وتفعيل أنظمة الجدار الناري والأمن السيبراني">Configured and activated firewall and cybersecurity systems</li>
+                <li data-en="Secured network infrastructure and implemented security protocols" data-ar="تأمين البنية التحتية للشبكة وتطبيق بروتوكولات الأمان">Secured network infrastructure and implemented security protocols</li>
+                <li data-en="Protected organizational data and enforced security policies" data-ar="حماية بيانات المنظمة وتطبيق سياسات الأمان">Protected organizational data and enforced security policies</li>
+              </ul>
+            </div>
+            
+            <div class="tl-role-item">
+              <h4 class="tl-role-title">
+                <span data-en="IT Specialist" data-ar="أخصائي تقنية معلومات">IT Specialist</span>
+                <span class="role-time" data-en="Jan 2025 - Dec 2025" data-ar="يناير ٢٠٢٥ - ديسمبر ٢٠٢٥">Jan 2025 - Dec 2025</span>
+              </h4>
+              <ul class="tl-det">
+                <li data-en="Provided IT support, network admin (DHCP, DNS, VLANs), and server management" data-ar="تقديم الدعم الفني، وإدارة الشبكة (DHCP, DNS, VLANs)، وإدارة السيرفرات">Provided IT support, network admin (DHCP, DNS, VLANs), and server management</li>
+                <li data-en="Configured MikroTik routers, FortiGate firewalls, and Windows Server (AD, RBAC)" data-ar="إعداد وبرمجة راوترات ميكروتيك، جدار حماية FortiGate، وسيرفر ويندوز (AD, RBAC)">Configured MikroTik routers, FortiGate firewalls, and Windows Server (AD, RBAC)</li>
+                <li data-en="Developed Power BI dashboards and managed Odoo ERP system to reduce branch downtime" data-ar="تطوير لوحات Power BI وإدارة نظام Odoo ERP للحد من وقت التوقف بالفروع">Developed Power BI dashboards and managed Odoo ERP system to reduce branch downtime</li>
+              </ul>
+            </div>
+
+            <div class="tl-role-item">
+              <h4 class="tl-role-title">
+                <span data-en="Operations & Logistics" data-ar="العمليات واللوجستيات">Operations & Logistics</span>
+                <span class="role-time" data-en="Jun 2025" data-ar="يونيو ٢٠٢٥">Jun 2025</span>
+              </h4>
+              <ul class="tl-det">
+                <li data-en="Managed Udhiyah project logistics, administration, and distribution workflows" data-ar="إدارة لوجستيات وعمليات وسير عمل مشروع الأضاحي">Managed Udhiyah project logistics, administration, and distribution workflows</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item anim" data-side="left">
+        <div class="tl-dot"><i class="fas fa-code"></i></div>
+        <div class="gcard hl tl-card">
+          <div class="tl-date"><i class="fas fa-calendar"></i> 2024</div>
+          <h3 data-en="Volunteer Platform" data-ar="منصة العمل التطوعي">Volunteer Platform</h3>
+          <span class="tl-co" data-en="Arab Open University" data-ar="الجامعة العربية المفتوحة"><img src="assets/logo-aou.png" alt="AOU" class="tl-logo">Arab Open University</span>
+          <span class="tl-type" data-en="Final Year Project" data-ar="مشروع التخرج">Final Year Project</span>
+          <ul class="tl-det">
+            <li data-en="Built a secure bilingual volunteer management platform" data-ar="بناء منصة آمنة ثنائية اللغة لإدارة المتطوعين">Built a secure bilingual volunteer management platform</li>
+            <li data-en="Implemented user authentication & role-based access control" data-ar="تنفيذ نظام مصادقة المستخدمين والتحكم بالصلاحيات">Implemented user authentication & role-based access control</li>
+            <li data-en="Developed RESTful APIs with Node.js & PostgreSQL" data-ar="تطوير واجهات برمجية باستخدام Node.js وPostgreSQL">Developed RESTful APIs with Node.js & PostgreSQL</li>
+            <li data-en="Connected volunteers with organizations & issued certificates" data-ar="ربط المتطوعين بالمنظمات وإصدار الشهادات">Connected volunteers with organizations & issued certificates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-cogs"></i> <span data-en="Skills" data-ar="المهارات">Skills</span></span><h2 class="sec-title" data-en="Technical & Business <span class='text-grad'>Skills</span>" data-ar="المهارات التقنية <span class='text-grad'>والعملية</span>">Technical & Business <span class="text-grad">Skills</span></h2></div>
+    <div class="skills-grid">
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-tools"></i></div><h3 data-en="IT Support & Troubleshooting" data-ar="الدعم الفني واستكشاف الأخطاء">IT Support & Troubleshooting</h3><p class="ss" data-en="Hardware, Software, Printers" data-ar="أجهزة، برمجيات، طابعات">Hardware, Software, Printers</p><div class="sbar"><div class="sfill" data-width="90"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-network-wired"></i></div><h3 data-en="Network Configuration" data-ar="إعداد الشبكات">Network Configuration</h3><p class="ss">TCP/IP, DNS, DHCP</p><div class="sbar"><div class="sfill" data-width="85"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fab fa-windows"></i></div><h3 data-en="Windows & Linux Admin" data-ar="إدارة ويندوز ولينكس">Windows & Linux Admin</h3><p class="ss" data-en="Active Directory, Servers, CLI" data-ar="Active Directory، سيرفرات، سطر أوامر">Active Directory, Servers, CLI</p><div class="sbar"><div class="sfill" data-width="85"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-user-shield"></i></div><h3 data-en="Cybersecurity" data-ar="الأمن السيبراني">Cybersecurity</h3><p class="ss" data-en="Incident Response & Threat Analysis" data-ar="استجابة للحوادث وتحليل التهديدات">Incident Response & Threat Analysis</p><div class="sbar"><div class="sfill" data-width="80"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-fire-flame-curved"></i></div><h3 data-en="Firewall Configuration" data-ar="إعداد الجدار الناري">Firewall Configuration</h3><p class="ss">FortiGate / Cisco</p><div class="sbar"><div class="sfill" data-width="75"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-chart-bar"></i></div><h3 data-en="Data Analysis" data-ar="تحليل البيانات">Data Analysis</h3><p class="ss" data-en="Python, Forecasting, Insights" data-ar="Python، التنبؤ، الرؤى">Python, Forecasting, Insights</p><div class="sbar"><div class="sfill" data-width="75"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-chart-line"></i></div><h3 data-en="Business Analysis" data-ar="تحليل الأعمال">Business Analysis</h3><p class="ss" data-en="Feasibility, Strategy, Excel" data-ar="جدوى، استراتيجية، Excel">Feasibility, Strategy, Excel</p><div class="sbar"><div class="sfill" data-width="70"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-users-gear"></i></div><h3 data-en="User Access & Identity" data-ar="إدارة الهوية والوصول">User Access & Identity</h3><p class="ss" data-en="RBAC, Odoo, Account Management" data-ar="RBAC، Odoo، إدارة حسابات">RBAC, Odoo, Account Management</p><div class="sbar"><div class="sfill" data-width="85"></div></div></div>
+      <div class="gcard hl sk anim"><div class="gi"><i class="fas fa-code"></i></div><h3 data-en="Web Development" data-ar="تطوير الويب">Web Development</h3><p class="ss">Express.js, PostgreSQL, REST APIs</p><div class="sbar"><div class="sfill" data-width="70"></div></div></div>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-project-diagram"></i> <span data-en="Projects" data-ar="المشاريع">Projects</span></span><h2 class="sec-title" data-en="Featured <span class='text-grad'>Work</span>" data-ar="أبرز <span class='text-grad'>الأعمال</span>">Featured <span class="text-grad">Work</span></h2></div>
+    <div class="projects-grid">
+      <!-- VolunteerLink -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>VolunteerLink</h3>
+        <p data-en="A bilingual digital platform bridging the gap between academic requirements and practical volunteer experiences. Features real-time hour logging, automated multi-tier verification, and certified acknowledgments, reducing administrative time by 70%." data-ar="منصة رقمية ثنائية اللغة لربط الخريجين بفرص التطوع، تتميز بتتبع الساعات الفعلي، نظام تحقق متعدد المستويات، وإصدار شهادات رقمية. ساهمت في تقليل وقت المعالجة الإدارية بنسبة 70%.">A bilingual digital platform bridging the gap between academic requirements and practical volunteer experiences. Features real-time hour logging, automated multi-tier verification, and certified acknowledgments, reducing administrative time by 70%.</p>
+        <div class="proj-tags"><span class="ptag">Node.js</span><span class="ptag">PostgreSQL</span><span class="ptag">REST APIs</span></div>
+      </div>
+      <!-- Portfolio -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3 data-en="Personal Portfolio" data-ar="الموقع الشخصي">Personal Portfolio</h3>
+        <p data-en="A fully responsive, bilingual portfolio website featuring interactive animations, dark/light mode toggle, and a dynamic contact form built entirely from scratch to showcase my technical skills." data-ar="موقع شخصي تفاعلي، ثنائي اللغة، يدعم الوضعين الليلي والنهاري، مع تأثيرات بصرية جذابة ونموذج تواصل مباشر، تم بناؤه من الصفر لعرض مهاراتي.">A fully responsive, bilingual portfolio website featuring interactive animations, dark/light mode toggle, and a dynamic contact form built entirely from scratch to showcase my technical skills.</p>
+        <div class="proj-tags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span></div>
+      </div>
+      <!-- Cyber Lab -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3 data-en="Cybersecurity Incident Response Lab" data-ar="بيئة محاكاة الأمن السيبراني">Cybersecurity Incident Response Lab</h3>
+        <p data-en="A simulated security environment built to practice incident response, network traffic analysis, and threat hunting scenarios, inspired by advanced cybersecurity training with STC." data-ar="بيئة محاكاة أمنية مبنية لتطبيق سيناريوهات الاستجابة للحوادث وتحليل التهديدات، مستوحاة من تدريب الأمن السيبراني المتقدم مع شركة STC.">A simulated security environment built to practice incident response, network traffic analysis, and threat hunting scenarios, inspired by advanced cybersecurity training with STC.</p>
+        <div class="proj-tags"><span class="ptag">Network Traffic Analysis</span><span class="ptag">Threat Hunting</span><span class="ptag">Firewalls</span></div>
+      </div>
+      <!-- Data Dashboard -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-chart-pie"></i></div>
+        <h3 data-en="Market Insights Dashboard" data-ar="لوحة تحكم تحليل بيانات السوق">Market Insights Dashboard</h3>
+        <p data-en="An interactive dashboard for analyzing market data and providing strategic insights to support decision-making, drawing from my experience conducting feasibility studies with BCG." data-ar="لوحة تحكم تفاعلية لتحليل بيانات السوق وتقديم رؤى استراتيجية لدعم اتخاذ القرارات، مستوحاة من العمل على دراسات الجدوى مع BCG.">An interactive dashboard for analyzing market data and providing strategic insights to support decision-making, drawing from my experience conducting feasibility studies with BCG.</p>
+        <div class="proj-tags"><span class="ptag">Data Visualization</span><span class="ptag">Excel</span><span class="ptag">Python</span></div>
+      </div>
+      <!-- Namaa Power BI -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 data-en="Namaa Power BI Dashboard" data-ar="لوحة تحكم نماء الأهلية (Power BI)">Namaa Power BI Dashboard</h3>
+        <p data-en="Interactive data visualization dashboards built with Power BI for Namaa Al-Ahliya Charity to track operational metrics, analyze donor data, and support strategic decision-making." data-ar="لوحات تحكم تفاعلية صُممت باستخدام Power BI لجمعية نماء الأهلية لتتبع المؤشرات التشغيلية، تحليل بيانات المانحين، ودعم اتخاذ القرارات الاستراتيجية.">Interactive data visualization dashboards built with Power BI for Namaa Al-Ahliya Charity to track operational metrics, analyze donor data, and support strategic decision-making.</p>
+        <div class="proj-tags"><span class="ptag">Power BI</span><span class="ptag">Data Analysis</span><span class="ptag">Dashboards</span></div>
+      </div>
+      <!-- MikroTik Network -->
+      <div class="gcard hl proj-card anim">
+        <div class="proj-icon"><i class="fas fa-network-wired"></i></div>
+        <h3 data-en="Multi-Branch Network Connectivity" data-ar="ربط وإدارة شبكات الفروع المتعددة">Multi-Branch Network Connectivity</h3>
+        <p data-en="Managed and restored secure network connectivity between the main HQ and multiple branch offices at Namaa Association. Configured and deployed MikroTik routers on-site to resolve network outages and ensure stable inter-branch communication." data-ar="إدارة واستعادة الاتصال الشبكي بين الإدارة العامة والفروع المتعددة لجمعية نماء الأهلية. قمت ببرمجة وتركيب أجهزة (MikroTik) ميدانياً لحل انقطاعات الشبكة وضمان استمرار العمل بين الفروع.">Managed and restored secure network connectivity between the main HQ and multiple branch offices at Namaa Association. Configured and deployed MikroTik routers on-site to resolve network outages and ensure stable inter-branch communication.</p>
+        <div class="proj-tags"><span class="ptag">MikroTik</span><span class="ptag">Network Troubleshooting</span><span class="ptag">Site-to-Site</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="section" id="certifications">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-certificate"></i> <span data-en="Certifications" data-ar="الشهادات">Certifications</span></span><h2 class="sec-title" data-en="Professional <span class='text-grad'>Certifications</span>" data-ar="الشهادات <span class='text-grad'>الاحترافية</span>">Professional <span class="text-grad">Certifications</span></h2></div>
+    <div class="certs-grid">
+      <!-- May 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/hcia-security.png"><div class="cert-img"><img src="assets/certs/hcia-security.png" alt="HCIA-Security V4.0"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="HCIA-Security V4.0" data-ar="HCIA-أمن المعلومات">HCIA-Security V4.0</h3><p data-en="Huawei ICT Academy" data-ar="أكاديمية هواوي">Huawei ICT Academy</p><p class="cert-year">2026</p></div>
+      <!-- May 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/hcia-iot.png"><div class="cert-img"><img src="assets/certs/hcia-iot.png" alt="HCIA-IoT V3.0"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="HCIA-IoT V3.0" data-ar="HCIA-إنترنت الأشياء">HCIA-IoT V3.0</h3><p data-en="Huawei ICT Academy" data-ar="أكاديمية هواوي">Huawei ICT Academy</p><p class="cert-year">2026</p></div>
+      <!-- May 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/bcg-business.png"><div class="cert-img"><img src="assets/certs/bcg-business.png" alt="Business Analysis"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="Business Analysis" data-ar="تحليل الأعمال">Business Analysis</h3><p>BCG</p><p class="cert-year">2026</p></div>
+      <!-- May 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/misk-data.png"><div class="cert-img"><img src="assets/certs/misk-data.png" alt="Data Analysis"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="Data Analysis" data-ar="تحليل البيانات">Data Analysis</h3><p>STC</p><p class="cert-year">2026</p></div>
+      <!-- Apr 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/misk-cyber.png"><div class="cert-img"><img src="assets/certs/misk-cyber.png" alt="Cybersecurity Incident Response"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="Cybersecurity Incident Response" data-ar="تحليل الاستجابة للحوادث">Cybersecurity Incident Response</h3><p>STC</p><p class="cert-year">2026</p></div>
+      <!-- Feb 2026 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/huawei-cloud.png"><div class="cert-img"><img src="assets/certs/huawei-cloud.png" alt="HCIA Cloud"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="HCIA-Cloud Computing" data-ar="HCIA-الحوسبة السحابية">HCIA-Cloud Computing</h3><p data-en="Huawei ICT Academy" data-ar="أكاديمية هواوي">Huawei ICT Academy</p><p class="cert-year">2026</p></div>
+      <!-- 2025 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/volunteering.png"><div class="cert-img"><img src="assets/certs/volunteering.png" alt="Volunteering"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="IT Specialist" data-ar="أخصائي تقنية معلومات">IT Specialist</h3><p data-en="Namaa Al-Ahliya Charity" data-ar="جمعية نماء الأهلية">Namaa Al-Ahliya Charity</p><p class="cert-year">2025</p></div>
+      <!-- Nov 2025 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ethical-hacker.png"><div class="cert-img"><img src="assets/certs/ethical-hacker.png" alt="Ethical Hacker"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="Ethical Hacker" data-ar="الاختراق الأخلاقي">Ethical Hacker</h3><p data-en="Cisco Networking Academy" data-ar="أكاديمية سيسكو">Cisco Networking Academy</p><p class="cert-year">2025</p></div>
+      <!-- Nov 2025 - Completion -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ethical-hacker-completion.png"><div class="cert-img"><img src="assets/certs/ethical-hacker-completion.png" alt="Ethical Hacker Completion"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="Ethical Hacker Completion" data-ar="إتمام الاختراق الأخلاقي">Ethical Hacker Completion</h3><p data-en="Cisco Networking Academy" data-ar="أكاديمية سيسكو">Cisco Networking Academy</p><p class="cert-year">2025</p></div>
+      <!-- Jan 2025 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-enterprise.png"><div class="cert-img"><img src="assets/certs/ccna-enterprise.png" alt="CCNA Enterprise"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Enterprise" data-ar="CCNA المؤسسي">CCNA Enterprise</h3><p data-en="Networking, Security & Automation" data-ar="الشبكات والأمن والأتمتة">Networking, Security & Automation</p><p class="cert-year">2025</p></div>
+      <!-- Jan 2025 - Completion -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-enterprise-completion.png"><div class="cert-img"><img src="assets/certs/ccna-enterprise-completion.png" alt="CCNA Enterprise Completion"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Enterprise Completion" data-ar="إتمام CCNA المؤسسي">CCNA Enterprise Completion</h3><p data-en="Cisco Networking Academy" data-ar="أكاديمية سيسكو">Cisco Networking Academy</p><p class="cert-year">2025</p></div>
+      <!-- Nov 2024 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-switching.png"><div class="cert-img"><img src="assets/certs/ccna-switching.png" alt="CCNA Switching"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Switching" data-ar="CCNA التبديل">CCNA Switching</h3><p data-en="Routing & Wireless Essentials" data-ar="أساسيات التوجيه واللاسلكي">Routing & Wireless Essentials</p><p class="cert-year">2024</p></div>
+      <!-- Nov 2024 - Completion -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-switching-completion.png"><div class="cert-img"><img src="assets/certs/ccna-switching-completion.png" alt="CCNA Switching Completion"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Switching Completion" data-ar="إتمام CCNA التبديل">CCNA Switching Completion</h3><p data-en="Cisco Networking Academy" data-ar="أكاديمية سيسكو">Cisco Networking Academy</p><p class="cert-year">2024</p></div>
+      <!-- May 2024 -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-intro.png"><div class="cert-img"><img src="assets/certs/ccna-intro.png" alt="CCNA Intro"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Introduction" data-ar="مقدمة CCNA">CCNA Introduction</h3><p data-en="Introduction to Networks" data-ar="مقدمة في الشبكات">Introduction to Networks</p><p class="cert-year">2024</p></div>
+      <!-- May 2024 - Completion -->
+      <div class="gcard hl cert-card anim" data-cert="assets/certs/ccna-intro-completion.png"><div class="cert-img"><img src="assets/certs/ccna-intro-completion.png" alt="CCNA Intro Completion"/><div class="cert-overlay"><i class="fas fa-expand"></i></div></div><h3 data-en="CCNA Intro Completion" data-ar="إتمام مقدمة CCNA">CCNA Intro Completion</h3><p data-en="Cisco Networking Academy" data-ar="أكاديمية سيسكو">Cisco Networking Academy</p><p class="cert-year">2024</p></div>
+    </div>
+    <div class="more-certs anim">
+      <div class="gcard hl mc"><div class="gi"><i class="fas fa-shield-halved"></i></div><h3 data-en="CompTIA Security+" data-ar="CompTIA Security+">CompTIA Security+</h3><p>SY0-701</p></div>
+      <div class="gcard hl mc"><div class="gi"><i class="fas fa-fire-flame-curved"></i></div><h3 data-en="FortiGate Firewall" data-ar="جدار ناري FortiGate">FortiGate Firewall</h3><p data-en="Administration" data-ar="الإدارة">Administration</p></div>
+      <div class="gcard hl mc"><div class="gi"><i class="fab fa-linux"></i></div><h3 data-en="Linux System Engineer" data-ar="مهندس أنظمة لينكس">Linux System Engineer</h3><p data-en="Huawei Talent" data-ar="مواهب هواوي">Huawei Talent</p></div>
+      <div class="gcard hl mc"><div class="gi"><i class="fas fa-wifi"></i></div><h3 data-en="Wireless Network Analysis" data-ar="تحليل الشبكات اللاسلكية">Wireless Network Analysis</h3><p data-en="& Attack Detection" data-ar="وكشف الهجمات">& Attack Detection</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificate Modal -->
+<div class="modal" id="certModal"><div class="modal-bg"></div><div class="modal-content"><button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button><img id="modalImg" src="" alt="Certificate"/></div></div>
+
+<!-- Education -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-graduation-cap"></i> <span data-en="Education" data-ar="التعليم">Education</span></span><h2 class="sec-title" data-en="Academic <span class='text-grad'>Information</span>" data-ar="المعلومات <span class='text-grad'>الأكاديمية</span>">Academic <span class="text-grad">Information</span></h2></div>
+    <div class="gcard hl edu-card anim" style="flex-direction:column;text-align:center;max-width:700px;margin:0 auto;padding:40px">
+      <img src="assets/aou-logo.png" alt="Arab Open University" style="width:120px;height:auto;margin:0 auto 16px;border-radius:12px">
+      <div>
+        <h3 data-en="Bachelor of Information Technology" data-ar="بكالوريوس تقنية المعلومات">Bachelor of Information Technology</h3>
+        <p style="margin-bottom:8px" data-en="<i class='fas fa-building-columns'></i> Arab Open University (AOU), Saudi Arabia" data-ar="<i class='fas fa-building-columns'></i> الجامعة العربية المفتوحة، السعودية"><i class="fas fa-building-columns"></i> Arab Open University (AOU), Saudi Arabia</p>
+        <p style="margin-bottom:16px"><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:50px;background:var(--grad2);border:1px solid var(--gbrd);font-size:.85rem;color:var(--c1);font-weight:600" data-en="🎓 Second Class Honours (OU-UK Certified)" data-ar="🎓 مرتبة الشرف الثانية (القسم البريطاني)">🎓 Second Class Honours (OU-UK Certified)</span></p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="sec-head anim"><span class="sec-tag"><i class="fas fa-envelope"></i> <span data-en="Contact" data-ar="تواصل">Contact</span></span><h2 class="sec-title" data-en="Get In <span class='text-grad'>Touch</span>" data-ar="تواصل <span class='text-grad'>معي</span>">Get In <span class="text-grad">Touch</span></h2></div>
+    <div class="contact-layout">
+      <div class="contact-info anim">
+        <a href="mailto:luayalaysuy@gmail.com" class="gcard hl ci"><div class="gi"><i class="fas fa-envelope"></i></div><div><h3 data-en="Email" data-ar="البريد">Email</h3><p>luayalaysuy@gmail.com</p></div></a>
+        <a href="tel:+966505639904" class="gcard hl ci"><div class="gi"><i class="fas fa-phone"></i></div><div><h3 data-en="Phone" data-ar="الجوال">Phone</h3><p style="direction:ltr;unicode-bidi:embed">+966 505 639 904</p></div></a>
+        <a href="https://wa.me/966505639904" target="_blank" class="gcard hl ci"><div class="gi"><i class="fab fa-whatsapp"></i></div><div><h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3><p data-en="Chat with me" data-ar="تواصل معي">Chat with me</p></div></a>
+        <a href="https://www.linkedin.com/in/loay-alaysuy" target="_blank" class="gcard hl ci"><div class="gi"><i class="fab fa-linkedin"></i></div><div><h3>LinkedIn</h3><p>loay-alaysuy</p></div></a>
+        <div class="gcard hl ci"><div class="gi"><i class="fas fa-location-dot"></i></div><div><h3 data-en="Location" data-ar="الموقع">Location</h3><p data-en="Al Wahah, Jeddah" data-ar="حي الواحة، جدة">Al Wahah, Jeddah</p></div></div>
+      </div>
+      <form class="contact-form gcard anim" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Don't fill: <input name="bot-field"></label></p>
+        <div class="form-group"><label data-en="Name" data-ar="الاسم">Name</label><input type="text" name="name" required></div>
+        <div class="form-group"><label data-en="Email" data-ar="البريد">Email</label><input type="email" name="email" required></div>
+        <div class="form-group"><label data-en="Message" data-ar="الرسالة">Message</label><textarea name="message" rows="5" required></textarea></div>
+        <button type="submit" class="btn btn-primary" id="formBtn"><i class="fas fa-paper-plane"></i> <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span></button>
+        <div id="formMsg" style="display:none;text-align:center;padding:16px;border-radius:10px;margin-top:16px;font-weight:600"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</section>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p data-en="Built with <i class='fas fa-heart' style='color:#ff3366'></i> by Loay Alesawi &copy; 2026." data-ar="صُنع بـ <i class='fas fa-heart' style='color:#ff3366'></i> بواسطة لؤي العيسوي &copy; 2026.">Built with <i class='fas fa-heart' style='color:#ff3366'></i> by Loay Alesawi &copy; 2026.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/loay-alaysuy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:luayalaysuy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
