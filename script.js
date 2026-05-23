@@ -83,11 +83,33 @@ const cForm=document.getElementById('contactForm'),fMsg=document.getElementById(
 cForm.addEventListener('submit',async e=>{
   e.preventDefault();
   fBtn.disabled=true;fBtn.style.opacity='.6';
-  // Simulate network request delay for static hosting (GitHub Pages)
-  await new Promise(resolve => setTimeout(resolve, 800));
-  fMsg.style.display='block';fMsg.style.background='linear-gradient(135deg,rgba(0,212,255,0.15),rgba(108,59,235,0.15))';fMsg.style.color='var(--c1)';
-  fMsg.innerHTML=lang==='ar'?'✅ تم إرسال رسالتك بنجاح!':'✅ Message sent successfully!';
-  cForm.reset();
+  
+  try {
+    const formData = new FormData(cForm);
+    const response = await fetch("https://formsubmit.co/ajax/luayalaysuy@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+    
+    if (response.ok) {
+      fMsg.style.display='block';
+      fMsg.style.background='linear-gradient(135deg,rgba(0,212,255,0.15),rgba(108,59,235,0.15))';
+      fMsg.style.color='var(--c1)';
+      fMsg.innerHTML=lang==='ar'?'✅ تم إرسال رسالتك بنجاح! يرجى تفعيل البريد الإلكتروني إذا كانت هذه هي المرة الأولى.':'✅ Message sent successfully! Please confirm email if first time.';
+      cForm.reset();
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    fMsg.style.display='block';
+    fMsg.style.background='rgba(239, 68, 68, 0.1)';
+    fMsg.style.color='#ef4444';
+    fMsg.innerHTML=lang==='ar'?'❌ عذراً، فشل إرسال الرسالة. يرجى المحاولة لاحقاً.':'❌ Sorry, message submission failed. Please try again.';
+  }
+  
   fBtn.disabled=false;fBtn.style.opacity='1';
   setTimeout(()=>fMsg.style.display='none',5000);
 });

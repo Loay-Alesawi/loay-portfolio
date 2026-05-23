@@ -376,9 +376,10 @@
         <a href="https://www.linkedin.com/in/loay-alaysuy" target="_blank" class="gcard hl ci"><div class="gi"><i class="fab fa-linkedin"></i></div><div><h3>LinkedIn</h3><p>loay-alaysuy</p></div></a>
         <div class="gcard hl ci"><div class="gi"><i class="fas fa-location-dot"></i></div><div><h3 data-en="Location" data-ar="الموقع">Location</h3><p data-en="Al Wahah, Jeddah" data-ar="حي الواحة، جدة">Al Wahah, Jeddah</p></div></div>
       </div>
-      <form class="contact-form gcard anim" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden"><label>Don't fill: <input name="bot-field"></label></p>
+      <form class="contact-form gcard anim" id="contactForm" name="contact" method="POST">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_subject" value="New Portfolio Message!">
+        <input type="hidden" name="_template" value="table">
         <div class="form-group"><label data-en="Name" data-ar="الاسم">Name</label><input type="text" name="name" required></div>
         <div class="form-group"><label data-en="Email" data-ar="البريد">Email</label><input type="email" name="email" required></div>
         <div class="form-group"><label data-en="Message" data-ar="الرسالة">Message</label><textarea name="message" rows="5" required></textarea></div>
