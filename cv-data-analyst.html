@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loay Alesawi – Data Analyst CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      color: #1a1a2e;
+      background: #f0f0f0;
+      line-height: 1.45;
+      font-size: 10px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      display: flex;
+      overflow: hidden;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 72mm;
+      background: linear-gradient(180deg, #0d1b2a 0%, #1b2d45 100%);
+      color: #e0e0e0;
+      padding: 24px 16px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4ecdc4;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid rgba(78, 205, 196, 0.3);
+    }
+
+    .sidebar-section { margin-bottom: 18px; }
+
+    /* Contact */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 7px;
+      font-size: 8.5px;
+      color: #c8d6e5;
+      line-height: 1.4;
+    }
+
+    .contact-item .icon {
+      width: 14px;
+      min-width: 14px;
+      margin-right: 7px;
+      text-align: center;
+      color: #4ecdc4;
+      font-size: 9px;
+      margin-top: 1px;
+    }
+
+    .contact-item a {
+      color: #c8d6e5;
+      text-decoration: none;
+    }
+
+    /* Skills */
+    .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .skill-category h3 {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #4ecdc4;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .skill-tag {
+      background: rgba(78, 205, 196, 0.12);
+      color: #b8d8d4;
+      font-size: 7.5px;
+      padding: 2.5px 6px;
+      border-radius: 3px;
+      border: 0.5px solid rgba(78, 205, 196, 0.2);
+    }
+
+    .skill-tag.highlight {
+      background: rgba(78, 205, 196, 0.25);
+      color: #e0f7f5;
+      border: 0.5px solid rgba(78, 205, 196, 0.45);
+      font-weight: 600;
+    }
+
+    /* Certifications */
+    .cert-group { margin-bottom: 8px; }
+
+    .cert-group h3 {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #4ecdc4;
+      margin-bottom: 3px;
+    }
+
+    .cert-item {
+      font-size: 7.8px;
+      color: #c8d6e5;
+      padding: 2px 0;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .cert-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #4ecdc4;
+      font-size: 7px;
+    }
+
+    /* Languages */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5px;
+      margin-bottom: 5px;
+    }
+
+    .lang-level {
+      color: #4ecdc4;
+      font-weight: 600;
+    }
+
+    /* ── Main Content ── */
+    .main {
+      flex: 1;
+      padding: 24px 28px;
+    }
+
+    .header {
+      margin-bottom: 14px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0d1b2a;
+      letter-spacing: -0.5px;
+    }
+
+    .header .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4ecdc4;
+      margin-top: 3px;
+      letter-spacing: 0.3px;
+    }
+
+    .header .tags {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .header .tag {
+      background: #e8f8f5;
+      color: #0d7377;
+      font-size: 8px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #b2dfdb;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 9px;
+      color: #444;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      background: linear-gradient(135deg, #f8fdfc 0%, #eef9f7 100%);
+      border-left: 3px solid #4ecdc4;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .summary strong {
+      color: #0d7377;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0d1b2a;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #4ecdc4;
+      margin-bottom: 10px;
+    }
+
+    /* Experience */
+    .exp-item {
+      margin-bottom: 12px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .exp-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .exp-date {
+      font-size: 8px;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 9px;
+      color: #4ecdc4;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .exp-bullets {
+      margin-top: 5px;
+      padding-left: 14px;
+    }
+
+    .exp-bullets li {
+      font-size: 8.5px;
+      color: #444;
+      margin-bottom: 3px;
+      line-height: 1.5;
+    }
+
+    .metric {
+      font-weight: 700;
+      color: #0d7377;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .edu-degree {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .edu-school {
+      font-size: 9px;
+      color: #4ecdc4;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 8.5px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════ PAGE 1 ════════════ -->
+<div class="page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <div class="contact-item"><span class="icon">📍</span> Jeddah, Saudi Arabia</div>
+      <div class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/loay-alesawi">linkedin.com/in/loay-alesawi</a></div>
+      <div class="contact-item"><span class="icon">🌐</span> <a href="#">Portfolio Website</a></div>
+      <div class="contact-item"><span class="icon">🇸🇦</span> Jordanian National</div>
+      <div class="contact-item"><span class="icon">📄</span> Transferable Iqama</div>
+      <div class="contact-item"><span class="icon">🚗</span> Valid Driving License (KSA)</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Technical Skills</h2>
+
+      <div class="skill-category">
+        <h3>Data & Analytics</h3>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag highlight">DAX</span>
+          <span class="skill-tag highlight">Data Modeling</span>
+          <span class="skill-tag highlight">SQL</span>
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">statsmodels</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Excel (Advanced)</span>
+          <span class="skill-tag">Data Storytelling</span>
+          <span class="skill-tag">KPI Governance</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>AI & Automation</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Predictive Modeling</span>
+          <span class="skill-tag">Time-Series Forecasting</span>
+          <span class="skill-tag">Regression Analysis</span>
+          <span class="skill-tag">Copilot</span>
+          <span class="skill-tag">AutoML (basics)</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>ERP & Data Sources</h3>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Odoo ERP</span>
+          <span class="skill-tag">ERP Data Extraction</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">ETL Concepts</span>
+          <span class="skill-tag">Data Validation</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Systems & Infrastructure</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">PRTG Monitoring</span>
+          <span class="skill-tag">Backup & DR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Certifications</h2>
+
+      <div class="cert-group">
+        <h3>Data & Analytics</h3>
+        <div class="cert-item">STC Data Analytics (Virtual Exp.)</div>
+        <div class="cert-item">BCG Business Analytics (Virtual Exp.)</div>
+      </div>
+
+      <div class="cert-group">
+        <h3>Cloud & Systems</h3>
+        <div class="cert-item">HCIA-Cloud Computing</div>
+        <div class="cert-item">Cloud O&M Engineer</div>
+        <div class="cert-item">Linux System Engineer</div>
+      </div>
+
+      <div class="cert-group">
+        <h3>Networking & Security</h3>
+        <div class="cert-item">CCNA: Intro to Networks</div>
+        <div class="cert-item">CCNA: Switching & Routing</div>
+        <div class="cert-item">CCNA: Enterprise & Automation</div>
+        <div class="cert-item">CompTIA Security+ (ITR)</div>
+        <div class="cert-item">HCIA-Security</div>
+        <div class="cert-item">HCIA-IoT</div>
+        <div class="cert-item">Ethical Hacker</div>
+        <div class="cert-item">FortiGate Admin (ITR)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Languages</h2>
+      <div class="lang-item">
+        <span>Arabic</span>
+        <span class="lang-level">Native</span>
+      </div>
+      <div class="lang-item">
+        <span>English</span>
+        <span class="lang-level">Professional</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <div class="header">
+      <h1>Loay Alesawi</h1>
+      <div class="title">Data Analyst & BI Specialist</div>
+      <div class="tags">
+        <span class="tag">Power BI & DAX</span>
+        <span class="tag">Python & Pandas</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">ERP (Odoo)</span>
+        <span class="tag">KPI Analytics</span>
+      </div>
+    </div>
+
+    <div class="summary">
+      Data Analyst with hands-on experience transforming raw datasets into actionable business insights.
+      Built predictive forecasting models analyzing <strong>10,000+ records</strong> with <strong>±5% accuracy</strong>, designed
+      interactive Power BI dashboards (<strong>DAX, data modeling, drill-through</strong>) that automated reporting
+      and saved <strong>10+ hrs/month</strong>, and extracted/validated data from ERP systems (Odoo) serving
+      <strong>100+ users</strong> across <strong>12 branches</strong>. Proficient in Python (Pandas, statsmodels), SQL, and
+      statistical analysis. Earned <strong>17+ professional certifications</strong>.
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+      <h2 class="section-title">Work Experience</h2>
+
+      <!-- STC – Data Analyst -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Data Analyst – Virtual Experience</span>
+          <span class="exp-date">May 2026 · 1 month</span>
+        </div>
+        <div class="exp-company">STC (Saudi Telecom Company) · Professional Training · Remote</div>
+        <ul class="exp-bullets">
+          <li>Analyzed user-behavior datasets (<span class="metric">~5,000 records</span>) using <strong>Python (Pandas, statsmodels)</strong> and <strong>Power BI (DAX measures, data modeling)</strong>, identifying key trends and reducing insight-generation time by <span class="metric">30%</span>.</li>
+          <li>Built statistical forecasting models (<strong>regression, time-series</strong>) predicting peak usage with <span class="metric">±5%</span> accuracy; delivered executive-ready dashboards with <strong>drill-through storytelling</strong> for stakeholder presentations.</li>
+          <li>Defined and tracked <span class="metric">8+</span> KPIs aligned to business objectives; ensured consistent <strong>metric governance</strong> across reporting outputs.</li>
+        </ul>
+      </div>
+
+      <!-- BCG – Business Analyst -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Business Analyst – Virtual Experience</span>
+          <span class="exp-date">May 2026 · 1 month</span>
+        </div>
+        <div class="exp-company">Boston Consulting Group (BCG) · Professional Training · Remote</div>
+        <ul class="exp-bullets">
+          <li>Conducted quantitative market analysis across <span class="metric">3</span> product lines using <strong>statistical methods</strong> (descriptive stats, correlation analysis); built a financial model that identified a <span class="metric">15%</span> cost-reduction opportunity.</li>
+          <li>Created <strong>executive-ready data-driven summaries</strong> with clear storytelling, adopted by senior stakeholders and accelerating strategic decisions by <span class="metric">2 weeks</span>.</li>
+          <li>Ensured <strong>data quality</strong> through validation checks and documentation of analytical assumptions and methodologies.</li>
+        </ul>
+      </div>
+
+      <!-- Namaa – IT Systems (Data-focused rewrite) -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">IT Systems & Data Engineer</span>
+          <span class="exp-date">Jan – Dec 2025 · 1 year</span>
+        </div>
+        <div class="exp-company">Namaa Al-Ahliyya Charity · Full-time · Mecca & Jeddah</div>
+        <ul class="exp-bullets">
+          <li>Designed and maintained interactive <strong>Power BI dashboards</strong> (<strong>DAX calculations, star-schema data models, scheduled refresh</strong>) tracking <span class="metric">15+</span> operational KPIs, reducing manual reporting effort by <span class="metric">30%</span> (≈ <span class="metric">10 hrs/month</span>).</li>
+          <li>Administered <strong>Odoo ERP</strong> system — extracted, transformed, and validated data across modules (inventory, HR, finance) for <span class="metric">100+ users</span>, reducing manual data processing by <span class="metric">25%</span> and improving data quality for executive reporting.</li>
+          <li>Wrote <strong>SQL queries</strong> (joins, aggregates, filters) against <strong>PostgreSQL</strong> databases to generate ad-hoc reports and reconcile cross-system data discrepancies.</li>
+          <li>Managed IT infrastructure across <span class="metric">12 branches</span>, implementing <strong>PRTG monitoring</strong> that reduced unplanned downtime by <span class="metric">40%</span> and improved data recovery reliability to <span class="metric">99.9%</span>.</li>
+          <li>Configured network and security infrastructure (MikroTik, FortiGate, Active Directory) ensuring secure connectivity for <span class="metric">100+</span> active users across all sites.</li>
+          <li>Trained junior staff on troubleshooting, decreasing ticket resolution time from <span class="metric">48hrs</span> to <span class="metric">12hrs</span> (<span class="metric">75%</span> improvement).</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div class="edu-degree">BSc in Information Technology & Computing (Network & Security)</div>
+        <div class="edu-school">Arab Open University (AOU) – Saudi Arabia</div>
+        <div class="edu-detail">Sep 2021 – Dec 2025 · Second Class Honours – OU UK Certified</div>
+        <div class="edu-detail" style="margin-top:3px; font-size:8.2px; color:#555;">
+          <strong>Relevant Coursework:</strong> Statistics & Probability · Database Management & SQL · Data Structures · Software Engineering
+        </div>
+        <div class="edu-detail" style="margin-top:3px; font-size:8.2px; color:#555;">
+          <strong>Capstone Project:</strong> VolunteerLink – A bilingual volunteer management platform with RBAC, real-time tracking, PostgreSQL database, and automated reporting. Reduced administrative processing time by <span class="metric">70%</span>.
+        </div>
+        <div class="edu-detail" style="margin-top:2px; font-size:8px; color:#777;">
+          <strong>Activities:</strong> Cybersecurity Club · Computer Club · Volunteering Club · Event Organizer (Saudi National Day)
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Interactive Donor & Operational Analytics Dashboard</span>
+          <span class="exp-date">Jul – Dec 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed an end-to-end <strong>Power BI analytics solution</strong> for Namaa Charity: built a <strong>star-schema data model</strong> integrating <span class="metric">4</span> data sources (Odoo ERP, Excel, manual registers, APIs), defined <span class="metric">15+</span> KPIs with stakeholder-aligned <strong>metric governance</strong>, and created <strong>drill-through dashboards</strong> with root-cause analysis capabilities.</li>
+          <li>Automated <strong>data refresh schedules</strong> and created a <strong>data dictionary</strong> documenting all measures, calculated columns, and data lineage — reducing ad-hoc reporting requests by <span class="metric">60%</span>.</li>
+          <li>Delivered <strong>executive summaries</strong> to leadership, enabling data-driven allocation of donor funds across <span class="metric">12 branches</span>.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Predictive Usage Forecasting Model</span>
+          <span class="exp-date">May 2026</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built a <strong>time-series forecasting pipeline</strong> using Python (Pandas, statsmodels) to predict telecom service peak usage from <span class="metric">10,000+</span> historical records. Achieved <span class="metric">±5%</span> forecast accuracy using ARIMA and regression models, enabling proactive resource allocation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">VolunteerLink – Full-Stack Management Platform</span>
+          <span class="exp-date">Sep 2024 – Dec 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Developed a bilingual (AR/EN) web platform with <strong>PostgreSQL</strong> backend, <strong>REST APIs</strong>, role-based access, and automated <strong>report generation</strong> — serving <span class="metric">500+ users</span> and <span class="metric">15+</span> organizations.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

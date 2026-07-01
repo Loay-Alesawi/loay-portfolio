@@ -46,13 +46,15 @@ function setLang(l){
       else el.innerHTML=v;
     }
   });
+  const cvBtn=document.querySelector('a[download]');
+  if(cvBtn)cvBtn.href=l==='ar'?'assets/Loay-Alesawi-CV-AR.pdf':'assets/Loay-Alesawi-CV-EN.pdf';
 }
 setLang(lang);
 lb.addEventListener('click',()=>setLang(lang==='en'?'ar':'en'));
 
 // === Typewriter ===
-const titles_en=['IT Support Engineer','Network & Security Specialist','Cybersecurity Analyst','Business & Data Analyst'];
-const titles_ar=['مهندس دعم تقنية معلومات','أخصائي شبكات وأمن معلومات','محلل أمن سيبراني','محلل أعمال وبيانات'];
+const titles_en=['IT Specialist','Data Analyst','Network & Security Specialist'];
+const titles_ar=['أخصائي تقنية معلومات','محلل بيانات','أخصائي شبكات وأمن معلومات'];
 let ti=0,ci2=0,del=false;const tw=document.getElementById('typewriter');
 function type(){const titles=lang==='ar'?titles_ar:titles_en;const c=titles[ti];if(del){tw.textContent=c.substring(0,ci2--);if(ci2<0){del=false;ti=(ti+1)%titles.length;setTimeout(type,400);return}setTimeout(type,30)}else{tw.textContent=c.substring(0,ci2++);if(ci2>c.length){del=true;setTimeout(type,2e3);return}setTimeout(type,70)}}type();
 

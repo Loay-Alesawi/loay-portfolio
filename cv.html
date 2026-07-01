@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loay Alesawi – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      color: #1a1a2e;
+      background: #f0f0f0;
+      line-height: 1.45;
+      font-size: 10px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      display: flex;
+      overflow: hidden;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 72mm;
+      background: linear-gradient(180deg, #0d1b2a 0%, #1b2d45 100%);
+      color: #e0e0e0;
+      padding: 24px 16px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4ecdc4;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid rgba(78, 205, 196, 0.3);
+    }
+
+    .sidebar-section { margin-bottom: 18px; }
+
+    /* Contact */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 7px;
+      font-size: 8.5px;
+      color: #c8d6e5;
+      line-height: 1.4;
+    }
+
+    .contact-item .icon {
+      width: 14px;
+      min-width: 14px;
+      margin-right: 7px;
+      text-align: center;
+      color: #4ecdc4;
+      font-size: 9px;
+      margin-top: 1px;
+    }
+
+    .contact-item a {
+      color: #c8d6e5;
+      text-decoration: none;
+    }
+
+    /* Skills */
+    .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .skill-category h3 {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #4ecdc4;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .skill-tag {
+      background: rgba(78, 205, 196, 0.12);
+      color: #b8d8d4;
+      font-size: 7.5px;
+      padding: 2.5px 6px;
+      border-radius: 3px;
+      border: 0.5px solid rgba(78, 205, 196, 0.2);
+    }
+
+    /* Certifications */
+    .cert-group { margin-bottom: 8px; }
+
+    .cert-group h3 {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #4ecdc4;
+      margin-bottom: 3px;
+    }
+
+    .cert-item {
+      font-size: 7.8px;
+      color: #c8d6e5;
+      padding: 2px 0;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .cert-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #4ecdc4;
+      font-size: 7px;
+    }
+
+    /* Languages */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5px;
+      margin-bottom: 4px;
+    }
+
+    .lang-level {
+      color: #4ecdc4;
+      font-size: 7.5px;
+    }
+
+    /* ── Main Content ── */
+    .main {
+      flex: 1;
+      padding: 24px 22px;
+    }
+
+    /* Header */
+    .header { margin-bottom: 16px; }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0d1b2a;
+      letter-spacing: -0.5px;
+      margin-bottom: 3px;
+    }
+
+    .header .title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4ecdc4;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .header .tag {
+      background: #f0faf9;
+      color: #1b2d45;
+      font-size: 7.5px;
+      padding: 2.5px 8px;
+      border-radius: 3px;
+      border: 0.5px solid #d0ece9;
+      font-weight: 500;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 9px;
+      color: #444;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      background: #f8fffe;
+      border-left: 3px solid #4ecdc4;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .summary strong { color: #1a1a2e; }
+
+    /* Section */
+    .section { margin-bottom: 14px; }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0d1b2a;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #4ecdc4;
+      margin-bottom: 10px;
+    }
+
+    /* Experience Item */
+    .exp-item { margin-bottom: 12px; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .exp-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #0d1b2a;
+    }
+
+    .exp-date {
+      font-size: 8px;
+      color: #888;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 9px;
+      color: #4ecdc4;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-bullets li {
+      font-size: 8.8px;
+      color: #333;
+      padding: 1.5px 0;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .exp-bullets li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: #4ecdc4;
+      font-size: 8px;
+    }
+
+    .exp-bullets li strong {
+      color: #0d1b2a;
+      font-weight: 600;
+    }
+
+    .metric {
+      color: #0d8a7e;
+      font-weight: 700;
+    }
+
+    /* Education */
+    .edu-item { margin-bottom: 8px; }
+
+    .edu-degree {
+      font-size: 10px;
+      font-weight: 700;
+      color: #0d1b2a;
+    }
+
+    .edu-school {
+      font-size: 9px;
+      color: #4ecdc4;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 8.5px;
+      color: #555;
+    }
+
+    /* Page 2 adjustments */
+    .page-2 .main {
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════ PAGE 1 ════════════ -->
+<div class="page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <div class="contact-item"><span class="icon">📍</span> Jeddah, Saudi Arabia</div>
+      <div class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/loay-alesawi">linkedin.com/in/loay-alesawi</a></div>
+      <div class="contact-item"><span class="icon">🌐</span> <a href="#">Portfolio Website</a></div>
+      <div class="contact-item"><span class="icon">🇸🇦</span> Jordanian National</div>
+      <div class="contact-item"><span class="icon">📄</span> Transferable Iqama</div>
+      <div class="contact-item"><span class="icon">🚗</span> Valid Driving License (KSA)</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Technical Skills</h2>
+
+      <div class="skill-category">
+        <h3>Networking & Security</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS / DHCP</span>
+          <span class="skill-tag">VLANs</span>
+          <span class="skill-tag">VPN</span>
+          <span class="skill-tag">MikroTik</span>
+          <span class="skill-tag">FortiGate</span>
+          <span class="skill-tag">Cyberoam</span>
+          <span class="skill-tag">IPS / IDS</span>
+          <span class="skill-tag">NAT</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">RBAC / IAM</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Systems & Operations</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Odoo ERP</span>
+          <span class="skill-tag">PRTG</span>
+          <span class="skill-tag">Backup & DR</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Data & Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Certifications</h2>
+
+      <div class="cert-group">
+        <h3>Cisco</h3>
+        <div class="cert-item">CCNA: Intro to Networks</div>
+        <div class="cert-item">CCNA: Switching & Routing</div>
+        <div class="cert-item">CCNA: Enterprise & Automation</div>
+        <div class="cert-item">Ethical Hacker</div>
+      </div>
+
+      <div class="cert-group">
+        <h3>Huawei</h3>
+        <div class="cert-item">HCIA-Security</div>
+        <div class="cert-item">HCIA-Cloud Computing</div>
+        <div class="cert-item">HCIA-IoT</div>
+        <div class="cert-item">Linux System Engineer</div>
+        <div class="cert-item">Cloud O&M Engineer</div>
+      </div>
+
+      <div class="cert-group">
+        <h3>Other</h3>
+        <div class="cert-item">CompTIA Security+ (ITR)</div>
+        <div class="cert-item">FortiGate Admin (ITR)</div>
+        <div class="cert-item">Wireless Analysis (ITR)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Languages</h2>
+      <div class="lang-item">
+        <span>Arabic</span>
+        <span class="lang-level">Native</span>
+      </div>
+      <div class="lang-item">
+        <span>English</span>
+        <span class="lang-level">Professional</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <div class="header">
+      <h1>Loay Alesawi</h1>
+      <div class="title">IT Systems & Network Engineer</div>
+      <div class="tags">
+        <span class="tag">CCNA</span>
+        <span class="tag">HCIA-Security</span>
+        <span class="tag">HCIA-Cloud</span>
+        <span class="tag">Ethical Hacker</span>
+        <span class="tag">CompTIA Security+</span>
+      </div>
+    </div>
+
+    <div class="summary">
+      IT & Network Engineer with hands-on experience managing and securing multi-branch network infrastructure.
+      Configured firewalls for <strong>4+ branches</strong>, reduced network downtime by <strong>80%</strong>,
+      monitored <strong>50+ devices</strong> via PRTG, and supported <strong>100+ users</strong> with
+      <strong>99.9% uptime</strong>. Built forecasting models analyzing <strong>10,000+ records</strong>
+      and earned <strong>17+ professional certifications</strong>.
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+      <h2 class="section-title">Work Experience</h2>
+
+      <!-- STC -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Data Analyst – Virtual Experience</span>
+          <span class="exp-date">May 2026 · 1 month</span>
+        </div>
+        <div class="exp-company">STC (Saudi Telecom Company) · Professional Training · Remote</div>
+        <ul class="exp-bullets">
+          <li>Analyzed user-behavior datasets (<span class="metric">~5k records</span>) to identify trends using <strong>Python & Power BI</strong>, cutting insight-generation time by <span class="metric">30%</span>.</li>
+          <li>Built predictive forecasting models that predicted peak usage with <span class="metric">±5%</span> accuracy, helping the team allocate resources more efficiently.</li>
+          <li>Program attracted approximately <span class="metric">3,500</span> global participants; completed <span class="metric">7 hours</span> of training.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Cybersecurity Analyst – Virtual Experience</span>
+          <span class="exp-date">Apr 2026 · 1 month</span>
+        </div>
+        <div class="exp-company">STC & Misk Foundation · Professional Training · Remote</div>
+        <ul class="exp-bullets">
+          <li>Investigated system logs and detected <span class="metric">12</span> Indicators of Compromise (IOCs), reducing potential breach impact by <span class="metric">80%</span>.</li>
+          <li>Applied incident-response procedures in collaboration with STC & Misk, resolving <span class="metric">100%</span> of reported alerts within <span class="metric">2 hours</span>.</li>
+        </ul>
+      </div>
+
+      <!-- BCG -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Business Analyst – Virtual Experience</span>
+          <span class="exp-date">May 2026 · 1 month</span>
+        </div>
+        <div class="exp-company">Boston Consulting Group (BCG) · Professional Training · Remote</div>
+        <ul class="exp-bullets">
+          <li>Conducted market research for <span class="metric">3</span> potential product lines and delivered a financial model that uncovered a <span class="metric">15%</span> cost-saving opportunity.</li>
+          <li>Prepared executive summaries adopted by senior stakeholders, accelerating decision-making by <span class="metric">2 weeks</span>.</li>
+        </ul>
+      </div>
+
+      <!-- Namaa – Cybersecurity -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Cybersecurity Specialist</span>
+          <span class="exp-date">Jul – Dec 2025 · 6 months</span>
+        </div>
+        <div class="exp-company">Namaa Al-Ahliyya Charity · Full-time · Mecca & Jeddah</div>
+        <ul class="exp-bullets">
+          <li>Configured enterprise-grade firewalls and cybersecurity controls, achieving <span class="metric">99.9%</span> network uptime across all sites.</li>
+          <li>Conducted vulnerability assessments and patch management, reducing exploitable vulnerabilities by <span class="metric">85%</span> within the first quarter.</li>
+          <li>Implemented endpoint protection (antivirus, EDR) on <span class="metric">150+</span> workstations, lowering malware incidents from <span class="metric">12/month</span> to <span class="metric">1/month</span> (<span class="metric">92%</span> reduction).</li>
+          <li>Delivered security awareness training (<span class="metric">2 sessions</span>, <span class="metric">30 participants</span> each), improving phishing-simulation rate from <span class="metric">27%</span> to <span class="metric">9%</span>.</li>
+        </ul>
+      </div>
+
+      <!-- Namaa – IT -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">IT Systems & Network Engineer</span>
+          <span class="exp-date">Jan – Dec 2025 · 1 year</span>
+        </div>
+        <div class="exp-company">Namaa Al-Ahliyya Charity · Full-time · Mecca & Jeddah</div>
+        <ul class="exp-bullets">
+          <li>Managed IT support and network administration across <span class="metric">12 branches</span>, implementing PRTG monitoring that reduced unplanned downtime by <span class="metric">40%</span>.</li>
+          <li>Configured MikroTik routers and FortiGate firewalls, ensuring secure connectivity for <span class="metric">100+ active users</span>.</li>
+          <li>Administered Windows Server (Active Directory, RBAC) and daily backups, improving data recovery reliability to <span class="metric">99.9%</span>.</li>
+          <li>Built Power BI dashboards that automated reporting, cutting effort by <span class="metric">30%</span> (≈ <span class="metric">10 hrs/month</span>).</li>
+          <li>Maintained Odoo ERP system, increasing operational visibility and reducing manual processing by <span class="metric">25%</span>.</li>
+          <li>Trained junior staff on troubleshooting, decreasing ticket resolution time from <span class="metric">48hrs</span> to <span class="metric">12hrs</span> (<span class="metric">75%</span> improvement).</li>
+        </ul>
+      </div>
+
+      <!-- Namaa – Operations -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Operations & Logistics Coordinator</span>
+          <span class="exp-date">Jun 2025 · 1 month</span>
+        </div>
+        <div class="exp-company">Namaa Al-Ahliyya Charity · Udhiyah Project · Volunteer</div>
+        <ul class="exp-bullets">
+          <li>Coordinated end-to-end logistics for a charitable distribution serving <span class="metric">≈5,000 beneficiaries</span> across multiple regions.</li>
+          <li>Managed inventory tracking with <span class="metric">99.8%</span> accuracy in stock reconciliation (<span class="metric">2 items out of 1,200</span>).</li>
+          <li>Organized a team of <span class="metric">12 volunteers</span>, achieving <span class="metric">98%</span> on-time delivery and <span class="metric">zero lost items</span>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div class="edu-degree">BSc in Information Technology & Computing (Network & Security)</div>
+        <div class="edu-school">Arab Open University (AOU) – Saudi Arabia</div>
+        <div class="edu-detail">Sep 2021 – Dec 2025 · Second Class Honours – OU UK Certified</div>
+        <div class="edu-detail" style="margin-top:3px; font-size:8.2px; color:#555;">
+          <strong>Capstone Project:</strong> VolunteerLink – A bilingual (Arabic/English) volunteer management platform with RBAC, real-time hour tracking, and automated certificate issuance. Reduced administrative processing time by <span class="metric">70%</span>.
+        </div>
+        <div class="edu-detail" style="margin-top:2px; font-size:8px; color:#777;">
+          <strong>Activities:</strong> Cybersecurity Club · Computer Club · Volunteering Club · Event Organizer (Saudi National Day)
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Bilingual Personal Portfolio Website</span>
+          <span class="exp-date">Jan 2026 – Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built a fully interactive bilingual (AR/EN) portfolio with Dark/Light mode, PWA capabilities, and smooth animations.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Cybersecurity Incident Response Lab</span>
+          <span class="exp-date">Nov – Dec 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Simulated <span class="metric">3</span> attack scenarios, analyzed <span class="metric">500+</span> log entries, and identified <span class="metric">15</span> IOCs. Reduced mean detection time from <span class="metric">45 min</span> to <span class="metric">12 min</span>. Tools: Wireshark · Splunk · Kali Linux · Nmap.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Interactive Donor & Operational Dashboard</span>
+          <span class="exp-date">Jul – Dec 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed Power BI dashboards for Namaa Charity to track KPIs, analyze donor data, and automate report generation for strategic decision-making.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
